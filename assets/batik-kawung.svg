@@ -1,1 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+  <defs>
+    <!-- satu "kelopak" kawung: oval lonjong meruncing, gaya guratan tangan -->
+    <path id="kw-petal" d="M0,0 C -11,-14 -12,-31 0,-45 C 12,-31 11,-14 0,0 Z"
+          fill="#C9AD79" fill-opacity="0.07" stroke="#A9812E" stroke-opacity="0.15" stroke-width="1.1" stroke-linejoin="round"/>
 
+    <!-- satu unit kawung: 4 kelopak mengelilingi titik pusat + titik kecil di tengah -->
+    <g id="kw-unit">
+      <use href="#kw-petal" transform="rotate(0)"/>
+      <use href="#kw-petal" transform="rotate(90)"/>
+      <use href="#kw-petal" transform="rotate(180)"/>
+      <use href="#kw-petal" transform="rotate(270)"/>
+      <circle cx="0" cy="0" r="3" fill="#A9812E" fill-opacity="0.16" stroke="none"/>
+    </g>
+  </defs>
+
+  <!-- Ubin 90x90 dibuat seamless TANPA patternTransform: satu unit penuh diletakkan di
+       tengah ubin, dan satu unit lagi diletakkan persis di keempat sudut. Saat ubin ini
+       diulang (CSS background-repeat), potongan unit di tiap sudut akan bertemu dan
+       menyatu sempurna dengan potongan dari ubin tetangga, membentuk kisi bunga
+       berselang-seling (motif kawung diagonal klasik) tanpa sambungan/patahan sama sekali. -->
+  <use href="#kw-unit" x="45" y="45"/>
+  <use href="#kw-unit" x="0" y="0"/>
+  <use href="#kw-unit" x="90" y="0"/>
+  <use href="#kw-unit" x="0" y="90"/>
+  <use href="#kw-unit" x="90" y="90"/>
+</svg>
