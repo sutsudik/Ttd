@@ -4,7 +4,7 @@
 
   var CONFIG = {
     // Setelah deploy Google Apps Script sebagai Web App, isi URL /exec di bawah.
-    API_ENDPOINT: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
+    API_ENDPOINT: "https://script.google.com/macros/s/AKfycby8mGsQeWct9v0FIE8eKaWi9WD6LBbIAMTTZNSQlkEVPvmOBXh2xX5WJj86_-q0mF8iSA/exec"
   };
 
   function getVisitorId() {
