@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ — Unduhin</title>
+<meta name="description" content="Pertanyaan yang sering diajukan seputar Unduhin, downloader video TikTok tanpa watermark.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- sidebar navigasi: sama seperti index.html (lihat js/sidebar.js) -->
+<div class="sidebar-overlay" id="sidebarOverlay" hidden></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Menu navigasi">
+  <div class="sidebar-head">
+    <span class="sidebar-title">Menu</span>
+    <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Tutup menu">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"/>
+        <path d="M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="sidebar-nav" aria-label="Navigasi utama">
+    <a href="index.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9.5 12 3l9 6.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </span>
+      <span>Home</span>
+    </a>
+    <a href="statistik.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20V10"/>
+          <path d="M12 20V4"/>
+          <path d="M20 20v-7"/>
+        </svg>
+      </span>
+      <span>Statistik</span>
+    </a>
+    <a href="index.html#howto" class="sidebar-link" data-nav="howto">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m4 6 1.5 1.5L8 5"/>
+          <path d="M12 6h8"/>
+          <path d="m4 12 1.5 1.5L8 11"/>
+          <path d="M12 12h8"/>
+          <path d="m4 18 1.5 1.5L8 17"/>
+          <path d="M12 18h8"/>
+        </svg>
+      </span>
+      <span>Cara Penggunaan</span>
+    </a>
+    <a href="faq.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1.3 1-1.3 1.9v.3"/>
+          <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span>FAQ</span>
+    </a>
+  </nav>
+</aside>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V6a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4"/>
+          <circle cx="9" cy="18" r="2.6"/>
+        </svg>
+      </span>
+      <span class="brand-name">Unduhin</span>
+    </a>
+    <div class="topbar-right">
+      <span class="topbar-note">Tanpa watermark</span>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <section class="page-hero">
+    <div class="section-inner">
+      <p class="eyebrow">FAQ</p>
+      <h1 class="page-title">Pertanyaan yang sering diajukan</h1>
+      <p class="page-sub">Belum ketemu jawabannya? Coba dulu bagian Cara Penggunaan di halaman utama.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="section-inner">
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apakah video hasil unduhan benar-benar tanpa watermark?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Ya. Semua tautan unduhan yang ditampilkan berasal langsung dari sumber video tanpa watermark bawaan TikTok, sesuai data yang dikembalikan oleh API yang berhasil merespons.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Kenapa link video saya gagal diproses?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Biasanya karena salah satu dari tiga hal: link yang ditempel bukan link TikTok yang valid, videonya bersifat privat (bukan publik), atau semua sumber unduhan publik yang dipakai sedang sibuk/mencapai batas penggunaan. Coba beberapa saat lagi atau pastikan videonya bisa dibuka langsung dari aplikasi TikTok.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Format apa saja yang tersedia untuk diunduh?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Tiga pilihan: MP4 kualitas HD (resolusi asli), MP4 ukuran ringkas untuk koneksi terbatas, dan MP3 untuk menyimpan audionya saja. Ketiganya hanya aktif jika sumber video benar-benar menyediakan tautannya.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apakah link atau video saya disimpan di server?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Tidak. Situs ini tidak punya server/backend sendiri — semua proses berjalan langsung di browser, memanggil API publik pihak ketiga. Tidak ada link, video, atau riwayat pemakaian yang dikirim atau disimpan di server milik situs ini.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Kenapa proses deteksi kadang butuh waktu lebih lama?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Sistem mencoba beberapa sumber publik secara berurutan. Kalau sumber utama sedang lambat merespons, prosesnya tetap ditunggu (bukan langsung dianggap gagal); baru pindah ke sumber berikutnya kalau sumber tersebut benar-benar mencapai batas penggunaan atau error.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apakah boleh mengunduh video milik orang lain?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">Alat ini dibuat untuk keperluan pribadi. Hormati hak cipta pembuat video — gunakan hasil unduhan sesuai izin pemilik konten dan aturan platform yang berlaku.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Dibuat untuk keperluan pribadi. Hormati hak cipta pembuat video.</p>
+</footer>
+
+<script src="js/backend.js" defer></script>
+<script src="js/maintenance.js" defer></script>
+<script src="js/stats.js" defer></script>
+<script src="js/sidebar.js" defer></script>
+<script src="js/admin-trigger.js" defer></script>
+</body>
+</html>

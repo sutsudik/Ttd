@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unduh Video TikTok Tanpa Watermark — Cepat &amp; Rapi</title>
+<meta name="description" content="Tempel link TikTok, lihat pratinjau, likes, komentar, dan share-nya, lalu unduh videonya dalam hitungan detik.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- sidebar navigasi: Home, Statistik, Cara Penggunaan, FAQ (lihat js/sidebar.js) -->
+<div class="sidebar-overlay" id="sidebarOverlay" hidden></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Menu navigasi">
+  <div class="sidebar-head">
+    <span class="sidebar-title">Menu</span>
+    <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Tutup menu">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"/>
+        <path d="M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="sidebar-nav" aria-label="Navigasi utama">
+    <a href="index.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9.5 12 3l9 6.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </span>
+      <span>Home</span>
+    </a>
+    <a href="statistik.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20V10"/>
+          <path d="M12 20V4"/>
+          <path d="M20 20v-7"/>
+        </svg>
+      </span>
+      <span>Statistik</span>
+    </a>
+    <a href="index.html#howto" class="sidebar-link" data-nav="howto">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m4 6 1.5 1.5L8 5"/>
+          <path d="M12 6h8"/>
+          <path d="m4 12 1.5 1.5L8 11"/>
+          <path d="M12 12h8"/>
+          <path d="m4 18 1.5 1.5L8 17"/>
+          <path d="M12 18h8"/>
+        </svg>
+      </span>
+      <span>Cara Penggunaan</span>
+    </a>
+    <a href="faq.html" class="sidebar-link">
+      <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1.3 1-1.3 1.9v.3"/>
+          <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span>FAQ</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- progress rail: menandai posisi dalam alur, hanya muncul saat sudah ada video -->
+<nav class="rail" id="rail" aria-hidden="true">
+  <span class="rail-dot" data-rail="hero"></span>
+  <span class="rail-dot" data-rail="stats"></span>
+  <span class="rail-dot" data-rail="download"></span>
+  <span class="rail-dot" data-rail="howto"></span>
+</nav>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#hero" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V6a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4"/>
+          <circle cx="9" cy="18" r="2.6"/>
+        </svg>
+      </span>
+      <span class="brand-name">Unduhin</span>
+    </a>
+    <div class="topbar-right">
+      <span class="topbar-note">Tanpa watermark</span>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-pattern" aria-hidden="true"><span class="hero-pattern-tile"></span></div>
+    <div class="section-inner hero-inner">
+      <p class="eyebrow" data-reveal>Video downloader</p>
+      <h1 class="hero-title" data-stagger>
+        <span>Tempel link TikTok-nya,</span>
+        <span>biar sisanya kami yang urus.</span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        Pratinjau video, lihat likes, komentar, dan share-nya secara langsung, lalu unduh dalam kualitas asli tanpa watermark.
+      </p>
+
+      <form class="link-form" id="linkForm" data-reveal>
+        <label for="tiktokUrl" class="sr-only">Tempel link video TikTok</label>
+        <div class="link-field">
+          <svg class="link-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.5 1.5"/>
+            <path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.5-1.5"/>
+          </svg>
+          <input
+            type="url"
+            id="tiktokUrl"
+            name="tiktokUrl"
+            placeholder="tiktok.com/@akun/video/..."
+            autocomplete="off"
+            inputmode="url"
+            required>
+          <div class="link-actions">
+            <button type="button" class="link-action-btn link-clear" id="linkClearBtn" aria-label="Hapus teks" hidden>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 6 6 18"/>
+                <path d="M6 6l12 12"/>
+              </svg>
+            </button>
+            <button type="button" class="link-action-btn link-paste" id="linkPasteBtn" aria-label="Tempel dari clipboard">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="8" y="2" width="8" height="4" rx="1"/>
+                <path d="M16 4h1.5A2.5 2.5 0 0 1 20 6.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 19.5v-13A2.5 2.5 0 0 1 6.5 4H8"/>
+              </svg>
+              <span>Paste</span>
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">
+          <span class="btn-label">Deteksi video</span>
+          <svg class="btn-spinner" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="42" stroke-dashoffset="10"/>
+          </svg>
+        </button>
+      </form>
+
+      <p class="hero-hint" id="formHint" role="status" aria-live="polite">
+        Tempel link, lalu tekan “Deteksi video” untuk memulai.
+      </p>
+
+      <div class="hero-examples" data-reveal>
+        <span>Coba contoh:</span>
+        <button type="button" class="chip" data-example="https://www.tiktok.com/@studio.senja/video/7284819302">@studio.senja</button>
+        <button type="button" class="chip" data-example="https://www.tiktok.com/@kopi.kampung/video/7401882271">@kopi.kampung</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2–7. PREVIEW + STATS (video sticky, statistik & unduhan mengalir di sampingnya) -->
+  <section class="flow" id="flow" data-state="idle">
+
+    <div class="flow-grid">
+
+      <!-- video pinned -->
+      <div class="video-pin-wrap">
+        <div class="video-card" id="videoCard">
+          <div class="video-frame">
+            <video id="videoThumb" class="video-thumb" controls playsinline preload="metadata" poster="assets/preview-placeholder.svg"></video>
+            <div class="video-scan" id="videoScan" aria-hidden="true"></div>
+            <div class="video-badge" id="videoBadge">
+              <span class="video-badge-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+              <span class="video-badge-text" id="videoBadgeText">Menunggu link</span>
+            </div>
+          </div>
+          <div class="video-meta">
+            <p class="video-author" id="videoAuthor">—</p>
+            <p class="video-caption" id="videoCaption">Pratinjau akan muncul di sini setelah video terdeteksi.</p>
+            <div class="video-extra">
+              <span class="video-extra-item">Durasi: <span id="videoDuration">—</span></span>
+              <span class="video-extra-item">Ukuran: <span id="videoSize">—</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- scrolling content -->
+      <div class="flow-content">
+
+        <!-- 2. STATS (tampil tepat setelah preview video) -->
+        <section class="step step-stats" id="stepStats" data-section="stats">
+          <p class="eyebrow" data-reveal>Langkah 1</p>
+          <h2 class="step-title" data-reveal>Statistik video</h2>
+          <p class="step-text" data-reveal>
+            Angka di bawah diambil dari video yang sama, dihitung naik hingga berhenti tepat di jumlah aslinya.
+          </p>
+
+          <ul class="stat-list" id="statList">
+            <li class="stat-row" data-stat="likes">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20.5s-7.5-4.6-9.8-9.1C.6 8 2 4.7 5.4 4c2-.4 3.9.5 5 2.2C11.5 4.5 13.4 3.6 15.4 4c3.4.7 4.8 4 3.2 7.4C16.3 15.9 12 20.5 12 20.5Z"/>
+                </svg>
+              </span>
+              <span class="stat-label">Suka</span>
+              <span class="stat-value" data-count="0">0</span>
+            </li>
+            <li class="stat-row" data-stat="comments">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.8 8.8 0 0 1-3.6-.7L3 20l1-4.8a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/>
+                </svg>
+              </span>
+              <span class="stat-label">Komentar</span>
+              <span class="stat-value" data-count="0">0</span>
+            </li>
+            <li class="stat-row" data-stat="shares">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="2.6"/>
+                  <circle cx="6" cy="12" r="2.6"/>
+                  <circle cx="18" cy="19" r="2.6"/>
+                  <path d="m8.3 10.7 7.4-4.2M8.3 13.3l7.4 4.2"/>
+                </svg>
+              </span>
+              <span class="stat-label">Dibagikan</span>
+              <span class="stat-value" data-count="0">0</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 3. DOWNLOAD -->
+        <section class="step step-download" id="stepDownload" data-section="download">
+          <p class="eyebrow" data-reveal>Langkah 2</p>
+          <h2 class="step-title" data-reveal>Pilih format unduhan</h2>
+          <p class="step-text" data-reveal>
+            Semua tautan mengarah ke video yang sama, tanpa watermark, siap disimpan ke perangkatmu.
+          </p>
+
+          <div class="download-list" id="downloadList" data-reveal>
+            <button type="button" class="download-option" data-format="mp4-hd">
+              <span class="dl-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4v11m0 0 4-4m-4 4-4-4"/>
+                  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+                </svg>
+              </span>
+              <span class="dl-text">
+                <span class="dl-title">MP4 · Kualitas HD</span>
+                <span class="dl-sub">Tanpa watermark, resolusi asli</span>
+              </span>
+              <span class="dl-arrow" aria-hidden="true">↓</span>
+            </button>
+
+            <button type="button" class="download-option" data-format="mp4-sd">
+              <span class="dl-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4v11m0 0 4-4m-4 4-4-4"/>
+                  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+                </svg>
+              </span>
+              <span class="dl-text">
+                <span class="dl-title">MP4 · Ukuran ringkas</span>
+                <span class="dl-sub">Cocok untuk koneksi terbatas</span>
+              </span>
+              <span class="dl-arrow" aria-hidden="true">↓</span>
+            </button>
+
+            <button type="button" class="download-option" data-format="mp3">
+              <span class="dl-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18V6a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4"/>
+                  <circle cx="9" cy="18" r="2.6"/>
+                </svg>
+              </span>
+              <span class="dl-text">
+                <span class="dl-title">MP3 · Hanya audio</span>
+                <span class="dl-sub">Simpan suara/musik videonya saja</span>
+              </span>
+              <span class="dl-arrow" aria-hidden="true">↓</span>
+            </button>
+          </div>
+
+          <p class="download-status" id="downloadStatus" role="status" aria-live="polite"></p>
+
+          <button type="button" class="restart-link" id="restartBtn">Unduh video lain →</button>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CARA PAKAI — selalu muncul setelah area input/result, baik result tampil maupun tidak -->
+  <section class="howto" id="howto">
+    <div class="section-inner howto-inner">
+      <p class="eyebrow" data-reveal>Cara pakai</p>
+      <h2 class="howto-title" data-reveal>Tiga langkah, kelar dalam hitungan detik.</h2>
+
+      <div class="howto-grid">
+        <div class="howto-card" data-reveal>
+          <span class="howto-num" aria-hidden="true">1</span>
+          <h3 class="howto-card-title">Salin link video</h3>
+          <p class="howto-card-text">Buka TikTok, cari video yang mau diunduh, lalu salin tautannya lewat tombol Share.</p>
+        </div>
+        <div class="howto-card" data-reveal>
+          <span class="howto-num" aria-hidden="true">2</span>
+          <h3 class="howto-card-title">Tempel &amp; deteksi</h3>
+          <p class="howto-card-text">Tempel link di kolom atas, lalu tekan “Deteksi video”. Pratinjau, likes, komentar, dan share-nya langsung muncul.</p>
+        </div>
+        <div class="howto-card" data-reveal>
+          <span class="howto-num" aria-hidden="true">3</span>
+          <h3 class="howto-card-title">Pilih &amp; unduh</h3>
+          <p class="howto-card-text">Pilih format MP4 HD, MP4 ringkas, atau MP3, lalu videonya siap disimpan ke perangkatmu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ENDING -->
+  <section class="ending" id="ending" data-section="ending">
+    <div class="section-inner ending-inner">
+      <p class="ending-line" data-stagger-word>Simple.</p>
+      <p class="ending-line" data-stagger-word>Fast.</p>
+      <p class="ending-line" data-stagger-word>Done.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Dibuat untuk keperluan pribadi. Hormati hak cipta pembuat video.</p>
+</footer>
+
+<script src="js/backend.js" defer></script>
+<script src="js/maintenance.js" defer></script>
+<script src="js/stats.js" defer></script>
+<script src="js/sidebar.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/admin-trigger.js" defer></script>
+</body>
+</html>
